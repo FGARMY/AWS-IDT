@@ -46,3 +46,14 @@ output "alb_url" {
   description = "Full URL to access the application via the ALB"
   value       = "http://${aws_lb.main.dns_name}"
 }
+
+output "alb_arn_suffix" {
+  description = "ARN suffix of the ALB (for CloudWatch metrics dimensions)"
+  value       = aws_lb.main.arn_suffix
+}
+
+output "target_group_arn_suffix" {
+  description = "ARN suffix of the target group (for CloudWatch metrics dimensions)"
+  value       = aws_lb_target_group.main.arn_suffix
+}
+

@@ -78,6 +78,6 @@ module "compute" {
   enable_cloudwatch_alarms = var.enable_cloudwatch_alarms
   cpu_high_threshold       = var.cpu_high_threshold
   cpu_low_threshold        = var.cpu_low_threshold
-  alb_arn_suffix           = module.alb.alb_arn
-  target_group_arn_suffix  = module.alb.target_group_arn
+  alb_arn_suffix           = module.alb.alb_arn_suffix
+  target_group_arn_suffix  = module.alb.target_group_arn_suffix
 }
